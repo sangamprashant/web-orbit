@@ -8,6 +8,7 @@ import Robo from "./robo.json";
 import Service from "./service.json";
 import SpaceShip from "./space-ship.json";
 import Team from "./team.json";
+import Home from "./home.json";
 
 interface AnimationComponentProps extends HTMLAttributes<HTMLDivElement> {
   file: string; // Prop used to select the animation
@@ -18,6 +19,7 @@ const AnimationComponent = ({ file, ...props }: AnimationComponentProps) => {
 
   const animations = [
     { name: "home", data: animationData },
+    { name: "home2", data: Home },
     { name: "planet-astro", data: PlanetAstro },
     { name: "robo", data: Robo },
     { name: "space-ship", data: SpaceShip },

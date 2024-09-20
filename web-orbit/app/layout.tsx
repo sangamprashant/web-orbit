@@ -1,12 +1,12 @@
+import { Footer } from "@/components";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
 import dynamic from "next/dynamic";
+import localFont from "next/font/local";
 import { Suspense } from "react";
+import "./globals.css";
 
 // Dynamically import NavBar and Footer components
 const NavBar = dynamic(() => import("@/components/Navbar"), { ssr: false });
-const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 
 // Fonts setup
 const geistSans = localFont({
@@ -38,15 +38,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Lazy-loaded NavBar */}
         <NavBar />
 
         {/* Suspense for lazy loading the children */}
         <Suspense fallback={<LoadingFallback />}>
           {children}
         </Suspense>
-
-        {/* Lazy-loaded Footer */}
         <Footer />
       </body>
     </html>

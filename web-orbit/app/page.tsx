@@ -1,13 +1,11 @@
-import { Contact, Home, OurAgency, Services, SimpleService, TeamSection } from "@/components";
-const page = () => {
-  return <>
-    <Home />
-    <Services />
-    <SimpleService />
-    <OurAgency />
-    <TeamSection />
-    <Contact />
-  </>;
+import { HomeRender } from "@/components";
+
+const Page = () => {
+  return (
+    <>
+      <HomeRender />
+    </>
+  );
 };
 
-export default page;
+export default Page;

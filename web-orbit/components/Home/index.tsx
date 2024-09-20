@@ -7,18 +7,18 @@ import Sliders from "./Sliders";
 import { slideIn } from "@/utils/motion";
 
 const Home = () => {
-
   return (
     <>
-      <section className="text-gray-600 body-font pt-20" id="hero">
+      <section className="text-indigo-900 body-font pt-20" id="hero">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-7xl text-6xl mb-4 font-bold text-white capitalize">
-              We create <br className="hidden lg:inline-block" />{" "}
-              <span className="text-orange-500">solutions</span> <br className="hidden lg:inline-block" />
+          {/* Text Section */}
+          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-8 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center flex-1">
+            <h1 className="title-font sm:text-7xl text-6xl mb-4 font-bold capitalize leading-tight">
+              We create <br className="hidden lg:inline-block" />
+              <span className="gradient-text">solutions</span> <br className="hidden lg:inline-block" />
               for your business
             </h1>
-            <p className="mb-8 leading-relaxed">
+            <p className="mb-8 leading-relaxed text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium eaque blanditiis modi temporibus exercitationem quia
               distinctio laborum repellat, quae, quis assumenda ad, quas quo
@@ -28,12 +28,19 @@ const Home = () => {
               <ThemeButton title="Get Started" />
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative">
-            <div className="hero-image">
-              <AnimationComponent file="home" />
-            </div>
 
-            {/* Sliders positioned */}
+          {/* Image Section */}
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 relative w-full h-96 flex-shrink-0">
+            <img
+              src="/home/hero/hero.svg"
+              alt="Hero Banner"
+              className="object-contain w-full h-full absolute inset-0"
+              style={{
+                width:"100%"
+              }}
+            />
+
+            {/* Animated Sliders */}
             <div className="absolute top-0 right-0 p-2">
               <motion.div
                 variants={slideIn("left", "tween", 0.2, 1)}

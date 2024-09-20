@@ -1,33 +1,54 @@
-"use client"
+"use client";
 import { NAV_LOGO_PNG } from '@/assets/images';
 import { mirror_bg } from '@/strings';
-// import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
-import { useState } from 'react';
-// import ThemeButton from '../Reuse/ThemeButton';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const Navarr = [
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  const NavItems = [
     { title: "Home", link: "/" },
     { title: "About", link: "/about" },
     { title: "Services", link: "/service" },
     { title: "Contact Us", link: "/contact-us" },
-    { title: "Blog", link: "/blog" }
+    { title: "Blog", link: "/blog" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={`text-gray-300  body-font fixed z-50 w-full ${mirror_bg} `}>
+    <header
+      className={`text-gray-300 body-font fixed z-50 w-full transition-all duration-300 ${(hasScrolled || isOpen) ? mirror_bg : ""
+        }`}
+    >
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
         <div className="flex justify-between items-center md:w-auto w-full">
-          <a className="flex title-font font-medium items-center mb-4 md:mb-0">
-            <Image src={NAV_LOGO_PNG} alt='' height={60} />
-          </a>
-          {/* Hamburger menu for mobile */}
+          <Link className="flex title-font font-medium items-center md:mb-0" href="/">
+            <Image src={NAV_LOGO_PNG} alt="Logo" height={60} width={150} />
+          </Link>
+
           <div className="md:hidden">
             <button
-              className="text-gray-300 focus:outline-none"
+              className="text-gray-900 focus:outline-none"
+              aria-label="Toggle navigation"
               onClick={() => setIsOpen(!isOpen)}
             >
               <MenuIcon fontSize="large" />
@@ -35,31 +56,23 @@ const NavBar = () => {
           </div>
         </div>
 
-
         <nav
           className={`md:ml-auto md:flex flex-wrap items-center text-base justify-center space-x-4 
-          ${isOpen ? 'block' : 'hidden'} md:block`}
+            ${isOpen ? 'block' : 'hidden'} md:block`}
         >
-          {Navarr.map((arr, index) => (
-            <a
+          {NavItems.map((item, index) => (
+            <Link
               key={index}
-              href={arr.link}
-              className="text-gray-300 hover:text-white transition-colors duration-300"
+              href={item.link}
+              className="text-gray-900 hover:text-black transition-colors duration-300"
             >
-              {arr.title}
-            </a>
+              {item.title}
+            </Link>
           ))}
         </nav>
-
-
       </div>
-
-      {/* <div className="hidden md:block">
-        <ThemeButton title='Login' icon={<ArrowRightAltIcon />} />
-      </div> */}
-
     </header>
   );
-}
+};
 
 export default NavBar;

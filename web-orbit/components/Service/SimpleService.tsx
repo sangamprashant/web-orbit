@@ -1,9 +1,8 @@
 import React from 'react';
 import ThemeButton from '../Reuse/ThemeButton';
-import ImageUrl from "./information.png";
-import Image from 'next/image';
 import AnimationComponent from '../Reuse/lottie/AnimationComponent';
 
+// Define service items with title and description
 const services = [
   {
     title: 'Contact Us',
@@ -25,33 +24,42 @@ const services = [
 
 const SimpleService = () => {
   return (
-    <section className="text-gray-300 body-font">
-      <div className="container px-5 py-24 mx-auto flex flex-wrap">
+    <section className="body-font bg-gray-50 py-16">
+      <div className="container mx-auto flex flex-wrap items-center">
+        {/* Animation Section */}
         <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
           <AnimationComponent file="service" />
         </div>
-        <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-          <h1 className='title-font sm:text-6xl text-6xl mb-4 font-bold text-white'>
-            Simple <span className='text-orange-600'>Solutions</span>
+
+        {/* Service Descriptions Section */}
+        <div className="flex flex-col lg:w-1/2 lg:pl-12 text-center lg:text-left">
+          <h1 className='text-5xl font-bold text-indigo-900 mb-6'>
+            Simple <span className='gradient-text'>Solutions</span>
           </h1>
+
+          {/* Service List */}
           {services.map((service, index) => (
-            <div key={index} className="flex flex-row mb-5 lg:items-start items-center gap-3">
-              <div className="w-20 h-14 inline-flex items-center justify-center rounded-full bg-orange-600 text-white mb-5">
-                {index + 1}
+            <div key={index} className="flex items-start mb-8">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-900 text-white font-bold text-lg">
+                  {index + 1}
+                </div>
               </div>
-              <div className="flex-grow">
-                <h2 className="text-white text-lg title-font font-medium text-left">
+              <div className="ml-4">
+                <h2 className="text-xl font-semibold text-indigo-800 mb-2">
                   {service.title}
                 </h2>
-                <p className="leading-relaxed text-gray-400 text-base">
+                <p className="leading-relaxed text-gray-700">
                   {service.description}
                 </p>
               </div>
             </div>
           ))}
-          <div className="flex gap-1 w-full items-center">
-            <ThemeButton title='Get Started' clasName='w-full flex-1 text-center' />
-            <ThemeButton title='Read More' clasName='w-full flex-1 text-center' />
+
+          {/* Call to Action Buttons */}
+          <div className="flex gap-4 justify-center lg:justify-start mt-6">
+            <ThemeButton title='Get Started' className='px-8 py-3 bg-indigo-900 text-white rounded hover:bg-indigo-700' />
+            <ThemeButton title='Read More' className='px-8 py-3 bg-white text-indigo-900 border border-indigo-900 rounded hover:bg-indigo-100' />
           </div>
         </div>
       </div>

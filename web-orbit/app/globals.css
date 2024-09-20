@@ -8,5 +8,26 @@
 }
 
 body {
-  background: #050816;
+  background: #ffffff;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #f97316, #ed82f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#service {
+  background-image: url(/bg-bubble.png);
+  background-size: contain;
+  background-position: center center;
+}
+
+.service-card {
+  backdrop-filter: blur(7px) saturate(94%);
+  -webkit-backdrop-filter: blur(7px) saturate(94%);
+  background-color: rgba(78, 78, 78, 0);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
