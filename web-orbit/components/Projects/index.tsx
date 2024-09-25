@@ -1,4 +1,5 @@
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { Title } from '../Reuse';
 
 const projects = [
   {
@@ -50,7 +51,7 @@ const projects = [
   // Additional project objects...
 ];
 
-const techColors = {
+const techColors: any = {
   React: 'bg-blue-600',
   'Node.js': 'bg-green-600',
   MongoDB: 'bg-green-800',
@@ -78,9 +79,7 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-6xl font-bold text-indigo-900 mb-4">
-            Our Innovative <span className="text-orange-500">Projects</span>
-          </h2>
+          <Title first="OUR INNOVATIVE" grad="PROJECTS" />
           <p className="text-lg text-gray-400">
             Explore a selection of our cutting-edge projects that leverage various technologies to deliver powerful solutions. Click on the links to learn more about each project and see the technologies we used to build them.
           </p>
@@ -91,7 +90,7 @@ const ProjectsSection = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="glass-effect bg-gray-300 bg-opacity-40 backdrop-blur-md p-6 rounded-lg shadow-sm transition-transform transform hover:scale-105 hover:shadow-xl"
+              className="glass-effect bg-gray-200 bg-opacity-40 backdrop-blur-md p-6 rounded-lg shadow-sm transition-transform transform hover:scale-105 hover:shadow-xl"
             >
               <img
                 src={project.image}
@@ -99,7 +98,7 @@ const ProjectsSection = () => {
                 className="w-full h-56 object-cover rounded-md mb-4"
               />
               <div className="p-4">
-                <h3 className="text-2xl font-semibold text-white mb-3">Technologies Used</h3>
+                <h3 className="text-2xl font-semibold text-indigo-900 mb-3">Technologies Used</h3>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, index) => (
                     <span
@@ -110,12 +109,12 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4">{project.description}</p>
+                <p className="text-indigo-800 mb-4">{project.description}</p>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300"
+                  className="inline-flex items-center text-blue-900 hover:text-blue-950"
                 >
                   <FaExternalLinkAlt className="mr-2" />
                   <span>Visit Project</span>

@@ -8,6 +8,7 @@ import Contact from '../Contact'
 import ProjectsSection from '../Projects'
 import ClassOfferings from '../Class'
 import PricingSection from '../Price/Prices'
+import Hub from './Hub'
 
 const HomeRender = () => {
     return (
@@ -19,8 +20,9 @@ const HomeRender = () => {
             <ProjectsSection />
             <ClassOfferings />
             <PricingSection />
-            <TeamSection />
             <Contact />
+            <TeamSection />
+            <Hub />
         </>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Title } from '../Reuse';
 
 const teamMembers = [
   {
@@ -17,12 +18,10 @@ const teamMembers = [
 
 const TeamSection: React.FC = () => {
   return (
-    <section className="text-gray-300 body-font">
+    <section className="text-indigo-900 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="text-2xl font-medium title-font mb-4 text-white tracking-widest">
-            OUR TEAM
-          </h1>
+          <Title first="OUR" grad="TEAM" />
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.
             Franzen you probably haven't heard of them.
@@ -39,7 +38,7 @@ const TeamSection: React.FC = () => {
                   src={member.image}
                 />
                 <div className="flex-grow sm:pl-8">
-                  <h2 className="title-font font-medium text-lg text-white">{member.name}</h2>
+                  <h2 className="title-font font-medium text-lg text-gray-700">{member.name}</h2>
                   <h3 className="text-gray-400 mb-3">{member.position}</h3>
                   <p className="mb-4">{member.description}</p>
                   <span className="inline-flex">
