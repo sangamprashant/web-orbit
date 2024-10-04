@@ -1,36 +1,22 @@
 import React from 'react';
+import { ECOMMERCE, SEO, WEBSITE } from '../Reuse/SVG';
 
 const Services = () => {
   const services = [
     {
       title: "Custom Website Design",
       description: "We create unique and visually appealing websites tailored to your business needs. Our designs prioritize user experience and responsiveness across all devices.",
-      icon: (
-        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
-          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-        </svg>
-      ),
+      icon: WEBSITE,
     },
     {
       title: "E-commerce Solutions",
       description: "Boost your sales with our comprehensive e-commerce platforms that offer secure payment options, inventory management, and seamless checkout experiences.",
-      icon: (
-        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
-          <circle cx="6" cy="6" r="3"></circle>
-          <circle cx="6" cy="18" r="3"></circle>
-          <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-        </svg>
-      ),
+      icon: ECOMMERCE,
     },
     {
       title: "SEO Optimization",
       description: "Increase your online visibility with our expert SEO services. We optimize your website to rank higher in search engine results, driving more traffic to your business.",
-      icon: (
-        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
-          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
-      ),
+      icon: SEO
     },
   ];
 
@@ -48,7 +34,7 @@ const Services = () => {
             >
               <div className="glass-effect bg-opacity-20 backdrop-filter backdrop-blur-md p-4 rounded-lg shadow-md service-card">
                 <div className="w-12 h-12 inline-flex items-center justify-center rounded-2xl bg-indigo-900 text-orange-100 mb-4 flex-shrink-0">
-                  {service.icon}
+                  <img src={service.icon} alt="k" className='w-6' />
                 </div>
                 <div className="flex-grow pl-6">
                   <h2 className="text-indigo-900 text-lg title-font font-medium mb-2">{service.title}</h2>
