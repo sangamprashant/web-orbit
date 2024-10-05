@@ -88,8 +88,8 @@ const PricingSection = () => {
 
           {/* Professional Plan */}
           <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
-            <div className="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
-              <span className="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
+            <div className="h-full p-6 rounded-lg border-2 border-orange-500 flex flex-col relative overflow-hidden">
+              <span className="bg-orange-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
               <h2 className="text-sm tracking-widest title-font mb-1 font-medium">Professional Plan</h2>
               <h1 className="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
                 <span>₹50,000</span>
@@ -100,7 +100,7 @@ const PricingSection = () => {
               <p className="flex items-center text-gray-600 mb-2">
                 API integration & deployment
               </p>
-              <button className="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
+              <button className="flex items-center mt-auto text-white bg-orange-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-600 rounded">
                 Choose Plan
               </button>
             </div>

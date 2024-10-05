@@ -1,0 +1,120 @@
+.technologies {
+  min-height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-technologies {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container-technologies .toggle-menu {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+.container-technologies .toggle-menu ul {
+  list-style: none;
+}
+
+.container-technologies .toggle-menu:hover {
+  box-shadow: none;
+}
+
+.container-technologies.active .toggle-menu {
+  transform: rotateZ(45deg);
+}
+
+.container-technologies .menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  animation: rotate 10s linear infinite; /* Continuous rotation */
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); /* Start position */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); /* End position */
+  }
+}
+
+.container-technologies .menu li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(calc(360deg / 6 * var(--i))) translateY(-150px); /* Rotate around the center */
+  opacity: 0; /* Start hidden */
+  animation: slideIn 0.5s forwards; /* Animate the entrance */
+  animation-delay: calc(0.1s * var(--i)); /* Staggered entrance */
+  pointer-events: none; /* Prevent pointer events on inactive items */
+}
+
+.container-technologies .menu li a {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0; /* Align to the top of the li */
+  left: 0; /* Align to the left of the li */
+  transform: translate(-50%, -50%); /* Center the icon */
+  pointer-events: visible; /* Enable pointer events on active items */
+  transition: 0.3s ease;
+}
+
+.container-technologies.active .menu li a {
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container-technologies .menu li a:hover {
+  box-shadow: none;
+}
+
+/* Keyframe animation for sliding in */
+@keyframes slideIn {
+  0% {
+    transform: rotate(calc(360deg / 6 * var(--i))) translateY(-150px) scale(0); /* Scale down to 0 */
+    opacity: 0; /* Start hidden */
+  }
+  100% {
+    transform: rotate(calc(360deg / 6 * var(--i))) translateY(-150px) scale(1); /* Scale to normal size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 720px) {
+  .container-technologies .toggle-menu {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+  }
+
+  .container-technologies .menu li a {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+  }
+}

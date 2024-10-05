@@ -1,143 +1,45 @@
-"use client"
-import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
-// import emailjs from "@emailjs/browser";
-
-// import { EarthCanvas } from "./canvas";
-// import { SectionWrapper } from "../hoc";
-// import { slideIn } from "../utils/motion";
-import { EarthCanvas } from "@/canvas";
-import { SectionWrapper } from "@/hoc";
-import { slideIn } from "@/utils/motion";
-import { styles } from "@/styles";
-import ThemeButton from "../Reuse/ThemeButton";
-
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e: any) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     setLoading(true);
-
-  //     emailjs
-  //       .send(
-  //         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-  //         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-  //         {
-  //           from_name: form.name,
-  //           to_name: "JavaScript Mastery",
-  //           from_email: form.email,
-  //           to_email: "sujata@jsmastery.pro",
-  //           message: form.message,
-  //         },
-  //         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-  //       )
-  //       .then(
-  //         () => {
-  //           setLoading(false);
-  //           alert("Thank you. I will get back to you as soon as possible.");
-
-  //           setForm({
-  //             name: "",
-  //             email: "",
-  //             message: "",
-  //           });
-  //         },
-  //         (error) => {
-  //           setLoading(false);
-  //           console.error(error);
-
-  //           alert("Ahh, something went wrong. Please try again.");
-  //         }
-  //       );
-  //   };
-
   return (
-    <section id="contact">
-      <div className="container mx-auto" >
-        <div
-          className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-        >
-          <motion.div
-            variants={slideIn("left", "tween", 0.2, 1)}
-            className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
-          >
-            <p className={styles.sectionSubText}>Get in touch</p>
-            <h3 className="title-font sm:text-7xl text-6xl mb-4 font-bold gradient-text capitalize" >Contact.</h3>
-
-            <form
-              //   ref={formRef}
-              //   onSubmit={handleSubmit}
-              className='mt-12 flex flex-col gap-8'
-            >
-              <label className='flex flex-col'>
-                <span className='text-white font-medium mb-4'>Your Name</span>
-                <input
-                  type='text'
-                  name='name'
-                  value={form.name}
-                  onChange={handleChange}
-                  placeholder="What's your good name?"
-                  className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-                />
-              </label>
-              <label className='flex flex-col'>
-                <span className='text-white font-medium mb-4'>Your email</span>
-                <input
-                  type='email'
-                  name='email'
-                  value={form.email}
-                  onChange={handleChange}
-                  placeholder="What's your web address?"
-                  className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-                />
-              </label>
-              <label className='flex flex-col'>
-                <span className='text-white font-medium mb-4'>Your Message</span>
-                <textarea
-                  rows={7}
-                  name='message'
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder='What you want to say?'
-                  className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-                />
-              </label>
-              <div className="text-right">
-
-                <ThemeButton title="send" />
-              </div>
-            </form>
-          </motion.div>
-
-          <motion.div
-            variants={slideIn("right", "tween", 0.2, 1)}
-            className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-          >
-            <EarthCanvas />
-          </motion.div>
-
+    <section className="text-gray-600 body-font relative">
+    <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+      <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <iframe width="100%" height="100%" className="absolute inset-0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style={{filter: "grayscale(1) contrast(1.2) opacity(0.4)"}}></iframe>
+        <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+          <div className="lg:w-1/2 px-6">
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+            <p className="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+          </div>
+          <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+            <a className="text-indigo-500 leading-relaxed">example@email.com</a>
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+            <p className="leading-relaxed">123-456-7890</p>
+          </div>
         </div>
       </div>
-    </section>
+      <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+        <p className="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+        <div className="relative mb-4">
+          <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
+          <input type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+        </div>
+        <div className="relative mb-4">
+          <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
+          <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+        </div>
+        <div className="relative mb-4">
+          <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
+          <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+        </div>
+        <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+      </div>
+    </div>
+  </section>
+
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+
+export default Contact
