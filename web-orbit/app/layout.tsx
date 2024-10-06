@@ -4,6 +4,8 @@ import dynamic from "next/dynamic";
 import localFont from "next/font/local";
 import { Suspense } from "react";
 import "./globals.css";
+import Progess from "./Progess";
+
 
 // Dynamically import NavBar and Footer components
 const NavBar = dynamic(() => import("@/components/Navbar"), { ssr: false });
@@ -56,7 +58,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Loading fallback component
 const LoadingFallback = () => <div>Loading...</div>;
 
 export default function RootLayout({
@@ -72,9 +73,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Progess />
         <NavBar />
-
-        {/* Suspense for lazy loading the children */}
         <Suspense fallback={<LoadingFallback />}>
           {children}
         </Suspense>

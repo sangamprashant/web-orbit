@@ -24,7 +24,7 @@ const ServicesOfferings = () => {
                         We provide a range of services to empower businesses with efficient web solutions, project management, and seamless deployment strategies. Explore our offerings to take your web presence to the next level.
                     </p>
                 </div>
-                <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+                <div className="flex flex-wrap  sm:mx-auto sm:mb-2 -mx-2">
                     {services.map((service, index) => (
                         <div key={index} className="p-2 sm:w-1/2 w-full">
                             <div className="bg-gray-100 rounded flex p-4 h-full items-center">

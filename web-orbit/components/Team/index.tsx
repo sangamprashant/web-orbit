@@ -14,6 +14,12 @@ const teamMembers = [
     description: 'DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.',
     image: 'https://dummyimage.com/201x201',
   },
+  {
+    name: 'Alper Kamu',
+    position: 'Designer',
+    description: 'DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.',
+    image: 'https://dummyimage.com/201x201',
+  },
 ];
 
 const TeamSection: React.FC = () => {
@@ -30,7 +36,7 @@ const TeamSection: React.FC = () => {
         {/* founders */}
         <div className="flex flex-wrap mb-4">
           {teamMembers.map((member, index) => (
-            <div key={index} className="p-4 lg:w-1/2">
+            <div key={index} className="p-4 lg:w-1/3">
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img
                   alt="team"

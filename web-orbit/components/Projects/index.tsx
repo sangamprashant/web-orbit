@@ -6,10 +6,7 @@ const projects = [
     id: 1,
     image: 'https://via.placeholder.com/300',
     technologies: [
-      'React', 'Node.js', 'MongoDB', 'Python', 'Flask', 'PostgreSQL',
-      'Capacitor', 'Electron', 'Next.js', 'Laravel', 'PHP', 'Vue',
-      'Angular', 'Docker', 'GraphQL', 'TypeScript', 'Ruby', 'Swift', 'Java'
-    ],
+      'React', 'Node.js', 'MongoDB', 'Python', 'Flask', 'PostgreSQL',],
     description: 'A comprehensive project showcasing a variety of technologies used across different stacks.',
     link: 'https://example.com/project1',
   },
@@ -27,28 +24,6 @@ const projects = [
     description: 'A full-stack application using React for the frontend and Node.js for the backend with MongoDB as the database.',
     link: 'https://example.com/project2',
   },
-  {
-    id: 2,
-    image: 'https://via.placeholder.com/300',
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    description: 'A full-stack application using React for the frontend and Node.js for the backend with MongoDB as the database.',
-    link: 'https://example.com/project2',
-  },
-  {
-    id: 2,
-    image: 'https://via.placeholder.com/300',
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    description: 'A full-stack application using React for the frontend and Node.js for the backend with MongoDB as the database.',
-    link: 'https://example.com/project2',
-  },
-  {
-    id: 2,
-    image: 'https://via.placeholder.com/300',
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    description: 'A full-stack application using React for the frontend and Node.js for the backend with MongoDB as the database.',
-    link: 'https://example.com/project2',
-  },
-  // Additional project objects...
 ];
 
 const techColors: any = {
