@@ -1,8 +1,8 @@
-import { Services } from '@/components'
+import ServicePage from '@/components/pages/ServicePage'
 
 const Service = () => {
     return (
-        <div className='min-h-screen flex items-center justify-center mx-auto'><Services /></div>
+        <ServicePage />
     )
 }
 

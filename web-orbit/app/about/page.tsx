@@ -1,13 +1,8 @@
-import { OurAgency } from '@/components'
-import React from 'react'
+import AboutUsPage from '@/components/pages/AboutUsPage'
 
 const About = () => {
     return (
-        <div className='min-h-screen flex items-center justify-center mx-auto'>
-
-            <OurAgency />
-
-        </div>
+        <AboutUsPage />
     )
 }
 

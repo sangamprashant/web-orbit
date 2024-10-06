@@ -3,7 +3,6 @@ import ThemeButton from '../Reuse/ThemeButton';
 import { Title } from '../Reuse';
 
 const ServicesOfferings = () => {
-    // Sample service data
     const services = [
         { name: "Full-Stack Development", description: "Comprehensive web development services using modern technologies like React, Node.js, and MongoDB.", icon: "F" },
         { name: "UI/UX Design", description: "Professional design services to create user-friendly interfaces and seamless experiences.", icon: "U" },

@@ -18,7 +18,7 @@
     "@react-three/fiber": "^8.17.6",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.27",
-    "antd": "^5.20.5",
+    "antd": "^5.21.2",
     "framer-motion": "^11.5.4",
     "lottie-web": "^5.12.2",
     "next": "14.2.8",

@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #ffffff;
+  background: #fbfbff;
 }
 
 .gradient-text {
@@ -54,4 +54,8 @@ body {
 
 .custom-tick li::before {
   content: "✅";
+}
+
+.blog-categories li:last-child a {
+  border-bottom: none;
 }

@@ -5,10 +5,12 @@ import localFont from "next/font/local";
 import { Suspense } from "react";
 import "./globals.css";
 import Progess from "./Progess";
+// import 'antd/dist/reset.css';
+import { ConfigProvider } from 'antd';
 
 
 // Dynamically import NavBar and Footer components
-const NavBar = dynamic(() => import("@/components/Navbar"), { ssr: false });
+const NavBar = dynamic(() => import("@/components/Navbar"), { ssr: true });
 
 // Fonts setup
 const geistSans = localFont({
@@ -73,12 +75,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* <ConfigProvider> */}
         <Progess />
         <NavBar />
         <Suspense fallback={<LoadingFallback />}>
           {children}
         </Suspense>
         <Footer />
+        {/* </ConfigProvider> */}
       </body>
     </html>
   );

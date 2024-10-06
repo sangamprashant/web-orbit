@@ -1,8 +1,10 @@
-import { Contact } from '@/components'
+import ContactUsPage from '@/components/pages/ContactUs'
 
 const ContactUs = () => {
     return (
-        <div className='min-h-screen  w-full'><Contact /></div>
+        <>
+            <ContactUsPage />
+        </>
     )
 }
 
