@@ -45,9 +45,9 @@ const Technologies: React.FC = () => {
                 <div className="flex flex-col md:flex-row items-center justify-center">
                     <div className="technologies-details flex-1">
                         {Object.entries(techDetails).map(([tech, detail]) => (
-                            <div key={tech} className="mb-6">
-                                <h3 className={`text-xl font-semibold text-${selectedTech === tech ? "indigo-900" : "gray-400"}`}>{tech}</h3>
-                                <p className={`text-sm font-semibold text-${selectedTech === tech ? "indigo-700" : "gray-300"}`}>{detail}</p>
+                            <div key={tech} className="mb-6 cursor-pointer" onClick={() => handleTechClick(tech)}>
+                                <h3 className={`text-xl  font-semibold text-${selectedTech === tech ? "indigo-900" : "gray-400 hover:text-gray-600"}`}>{tech}</h3>
+                                <p className={`text-sm  font-semibold text-${selectedTech === tech ? "indigo-700" : "gray-300 hover:text-gray-500"}`}>{detail}</p>
                             </div>
                         ))}
                     </div>

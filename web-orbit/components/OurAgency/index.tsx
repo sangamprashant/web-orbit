@@ -17,13 +17,6 @@ const OurAgency = () => {
           <p className="leading-relaxed text-gray-400 mb-8">
             Our mission is to empower businesses through creativity and expertise, ensuring each project we undertake not only meets but exceeds expectations. Whether you’re looking for digital marketing, web development, or branding services, our agency is committed to your success.
           </p>
-          <h2 className="text-2xl font-semibold text-white mb-4">Why Choose Us?</h2>
-          <ol className="list- list-inside text-gray-400 mb-8 custom-tick">
-            <li>Tailored Solutions: Customized strategies that fit your unique business needs.</li>
-            <li>Experienced Team: A dedicated team with expertise across various fields.</li>
-            <li>Innovative Approach: Embracing the latest technologies to ensure your success.</li>
-            <li>Commitment to Excellence: Striving for the highest standards in every project.</li>
-          </ol>
           <div className="flex justify-center md:justify-start">
             <ThemeButton 
               title='Read More' 

@@ -1,8 +1,8 @@
-import { NAV_LOGO_PNG } from '@/assets/images';
 import Image from 'next/image';
 import './footer.css';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { NAV_LOGO_PNG } from '@/assets/assets';
 
 const Footer = () => {
   const categories = [

@@ -64,12 +64,12 @@ const BlogSection = () => {
           {/* Sidebar */}
           <div className="md:w-1/3">
             {/* Search */}
-            <div className="bg-indigo-50 rounded p-4 mb-4 shadow-sm">
+            <div className="bg-indigo-50 rounded p-4 mb-4 shadow-lg border-indigo-950 border">
               <BolgSearch />
             </div>
 
             {/* Categories */}
-            <div className="bg-indigo-50 p-6 rounded shadow-sm">
+            <div className="bg-indigo-50 p-6 rounded shadow-lg border-indigo-950 border">
               <h2 className="text-xl font-bold mb-4 text-indigo-600">Categories</h2>
               <ul className="space-y-2 blog-categories">
                 {categories.map((link, index) => (
@@ -86,7 +86,7 @@ const BlogSection = () => {
             </div>
 
             {/* Top Posts */}
-            <div className="bg-indigo-50 rounded shadow-sm mt-6 p-6">
+            <div className="bg-indigo-50 rounded shadow-lg mt-6 p-6 border-indigo-950 border">
               <h2 className="text-xl font-bold mb-4 text-indigo-600">Top Posts</h2>
               <div className="space-y-4">
                 {topPost.map((post, index) => (

@@ -1,12 +1,12 @@
-import React from 'react';
-import { FaRocket, FaCogs, FaEnvelope } from 'react-icons/fa';
+import { contactSvg_Hub, rocketSvg_Hub, serviceSvg_Hub } from '@/assets/assets';
+import Image from 'next/image';
 import { Title } from '../Reuse';
 
 const Hub = () => {
     const links = [
-        { title: "Get Started", description: "Start your journey with us", url: "#", icon: <FaRocket /> },
-        { title: "Services", description: "Explore our services", url: "#", icon: <FaCogs /> },
-        { title: "Contact Us", description: "Reach out to us for support", url: "#", icon: <FaEnvelope /> }
+        { title: "Get Started", description: "Start your journey with us", url: "#", icon: rocketSvg_Hub },
+        { title: "Services", description: "Explore our services", url: "#", icon: serviceSvg_Hub },
+        { title: "Contact Us", description: "Reach out to us for support", url: "#", icon: contactSvg_Hub }
     ];
 
     return (
@@ -19,7 +19,7 @@ const Hub = () => {
                     <div key={idx} className="border rounded-lg shadow-lg p-6 hover:bg-gray-100 transition duration-300">
                         <div className="flex items-center mb-4 gap-2">
                             <div className="bg-indigo-100 flex p-4 rounded-full justify-center items-center">
-                                <span className="text-6xl text-indigo-600">{link.icon}</span>
+                                <Image src={link.icon} alt="" height={60} width={60} />
                             </div>
                             <div>
                                 <h2 className="text-2xl font-semibold">{link.title}</h2>

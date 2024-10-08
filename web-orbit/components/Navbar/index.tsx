@@ -1,5 +1,5 @@
 "use client";
-import { NAV_LOGO_PNG } from '@/assets/images';
+import { NAV_LOGO_PNG } from '@/assets/assets';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +11,7 @@ const NavBar = () => {
 
   const NavItems = [
     { title: "Home", link: "/" },
-    { title: "About", link: "/about" },
+    { title: "About Us", link: "/about" },
     { title: "Services", link: "/service" },
     { title: "Contact Us", link: "/contact-us" },
     { title: "Blog", link: "/blog" },
