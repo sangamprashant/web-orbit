@@ -1,4 +1,4 @@
-import { aboutAgency } from '@/assets/assets'
+import { aboutAgency, aboutAgencyImage } from '@/assets/assets'
 import PageBanner from '@/components/Reuse/PageBanner'
 import PageLayout from '@/components/Reuse/PageLayout'
 import Image from 'next/image'
@@ -6,15 +6,12 @@ import Image from 'next/image'
 const Agency = () => {
     return (
         <>
-            {/* Banner Section */}
             <PageBanner title='Our' title2='Agency' image={aboutAgency} />
-
             <PageLayout>
                 <div className="flex flex-col md:flex-row gap-8 items-center">
-                    {/* Image Section */}
                     <div className="md:w-1/2 flex-1">
                         <Image
-                            src={aboutAgency}
+                            src={aboutAgencyImage}
                             alt="Our Agency"
                             className="rounded-lg shadow-lg mr-2"
                             width={1000}
@@ -27,15 +24,12 @@ const Agency = () => {
                         />
                     </div>
 
-                    {/* Content Section */}
-                    <div className="md:w-1/2">
+                        <div className="md:w-1/2 space-y-6">
                         <p className="text-gray-700 leading-relaxed">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-                            beatae pariatur tenetur, itaque enim cum commodi, id rerum, quidem
-                            corporis eveniet consequuntur similique placeat nobis. Quos dolores
-                            quis molestias illum. Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Sed facere dignissimos voluptates rerum beatae
-                            aliquam nesciunt repellat obcaecati dolorum.
+                            At our agency, we specialize in crafting tailored solutions that meet the unique needs of our clients. With a dedicated team of professionals, we leverage innovative strategies and cutting-edge technology to drive growth and enhance brand visibility.
+                        </p>
+                        <p className="text-gray-700 leading-relaxed">
+                            Our mission is to empower businesses through creativity and expertise, ensuring each project we undertake not only meets but exceeds expectations. Whether you’re looking for digital marketing, web development, or branding services, our agency is committed to your success.
                         </p>
                     </div>
                 </div>

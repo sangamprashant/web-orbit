@@ -46,7 +46,6 @@ const WhyChooseUs = () => {
                     />
                 </div>
 
-                {/* Content Section */}
                 <div className="md:w-1/2">
                     <h2 className="text-3xl font-bold text-indigo-900 mb-4">Why Choose Us?</h2>
                     <h3 className="text-lg text-gray-600 mb-6">
@@ -56,7 +55,7 @@ const WhyChooseUs = () => {
                         Our mission is to provide each client with the tools they need to succeed. We combine deep industry knowledge, modern technology, and a relentless commitment to our customers' goals to ensure lasting success.
                     </p>
 
-                    <div className="space-y-6">
+                    <div className="space-y-3">
                         {reasons.map((reason, index) => (
                             <div key={index} className="flex items-start">
                                 <div className="mr-4">

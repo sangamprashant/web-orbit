@@ -4,6 +4,8 @@ import PageLayout from '../Reuse/PageLayout';
 import { FaRegEye } from "react-icons/fa";
 import { PiLineVerticalBold } from "react-icons/pi";
 import BolgSearch from './BolgSearch';
+import PageBanner from '../Reuse/PageBanner';
+import { aboutAgency } from '@/assets/assets';
 
 const BlogSection = () => {
   const blogPosts = [
@@ -59,6 +61,7 @@ const BlogSection = () => {
   return (
     <>
       <PageHeader title="Blog" />
+      <PageBanner title='Blogs' image={aboutAgency} />
       <PageLayout>
         <div className="flex flex-col-reverse md:flex-row gap-12">
           {/* Sidebar */}

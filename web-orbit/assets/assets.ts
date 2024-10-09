@@ -8,6 +8,7 @@ const serviceSvg_Hub = "/svg/digital-services.svg";
 const aboutWhyChooseUs = "/page/why-choose-us.jpg";
 const aboutWhyChooseUsBg = "/page/why-choose-us-bg.jpg";
 const aboutAgency = "/page/agency.jpg";
+const aboutAgencyImage="/page/agency-image.jpg"
 
 const contactUsBanner = "/page/call-center.avif";
 
@@ -19,5 +20,5 @@ export {
   aboutWhyChooseUsBg,
   aboutAgency,
   contactUsBanner,
-  NAV_LOGO_PNG,LOGO_PNG
+  NAV_LOGO_PNG,LOGO_PNG,aboutAgencyImage
 };
