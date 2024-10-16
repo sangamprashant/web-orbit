@@ -6,24 +6,24 @@ import { NAV_LOGO_PNG } from '@/assets/assets';
 
 const Footer = () => {
   const categories = [
-    { title: 'Privacy Policy', url: 'https://weborbit.com/privacy-policy' },
-    { title: 'Terms of Service', url: 'https://weborbit.com/terms-of-service' },
-    { title: 'Help Center', url: 'https://weborbit.com/help-center' },
-    { title: 'Careers', url: 'https://weborbit.com/careers' }
+    { title: 'Privacy Policy', url: '/privacy-policy' },
+    { title: 'Terms of Service', url: '/terms-of-service' },
+    { title: 'Help Center', url: '/help-center' },
+    { title: 'Careers', url: '/careers' }
   ];
 
   const otherLinks = [
-    { title: 'Partnerships', url: 'https://weborbit.com/partnerships' },
-    { title: 'Affiliate Program', url: 'https://weborbit.com/affiliate-program' },
-    { title: 'Pricing Plans', url: 'https://weborbit.com/pricing' },
-    { title: 'Customer Stories', url: 'https://weborbit.com/customer-stories' }
+    { title: 'Partnerships', url: '/partnerships' },
+    { title: 'Affiliate Program', url: '/affiliate-program' },
+    { title: 'Pricing Plans', url: '/pricing' },
+    { title: 'Customer Stories', url: '/customer-stories' }
   ];
 
   const resources = [
-    { title: 'Blog', url: 'https://weborbit.com/blog' },
-    { title: 'Documentation', url: 'https://weborbit.com/docs' },
-    { title: 'API Reference', url: 'https://weborbit.com/api-reference' },
-    { title: 'Community Forum', url: 'https://weborbit.com/forum' }
+    { title: 'Blog', url: '/blog' },
+    { title: 'Documentation', url: '/docs' },
+    { title: 'API Reference', url: '/api-reference' },
+    { title: 'Community Forum', url: '/forum' }
   ];
 
   const socialIcons = [

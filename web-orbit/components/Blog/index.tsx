@@ -1,11 +1,10 @@
-import React from 'react';
-import PageHeader from '../Reuse/PageHeader';
-import PageLayout from '../Reuse/PageLayout';
+import { blogBanner } from '@/assets/assets';
 import { FaRegEye } from "react-icons/fa";
 import { PiLineVerticalBold } from "react-icons/pi";
-import BolgSearch from './BolgSearch';
 import PageBanner from '../Reuse/PageBanner';
-import { aboutAgency } from '@/assets/assets';
+import PageHeader from '../Reuse/PageHeader';
+import PageLayout from '../Reuse/PageLayout';
+import BolgSearch from './BolgSearch';
 
 const BlogSection = () => {
   const blogPosts = [
@@ -60,8 +59,13 @@ const BlogSection = () => {
 
   return (
     <>
-      <PageHeader title="Blog" />
-      <PageBanner title='Blogs' image={aboutAgency} />
+      <PageHeader title="Blogs" />
+      <PageBanner
+        title="Explore Our"
+        title2="Latest Blogs"
+        description="Stay updated with the latest insights, tutorials, and articles from industry experts. Discover useful tips and trends in web development, online learning, and much more."
+        image={blogBanner}
+      />
       <PageLayout>
         <div className="flex flex-col-reverse md:flex-row gap-12">
           {/* Sidebar */}

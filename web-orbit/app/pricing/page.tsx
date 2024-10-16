@@ -1,5 +1,4 @@
 import PricingPage from '@/components/pages/PricingPage'
-import React from 'react'
 
 const Pricing = () => {
     return (
