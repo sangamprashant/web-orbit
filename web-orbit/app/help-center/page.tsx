@@ -20,40 +20,57 @@ const HelpCenter: React.FC = () => {
 
   const navItems: NavItem[] = [
     {
-      title: "Getting Started",
+      title: "Getting Started with Our Services",
       content: (
         <div>
-          <p>To create your first website:</p>
+          <p>To begin using our web development services:</p>
           <ol>
-            <li>Contact us for a consultation.</li>
-            <li>We will guide you through the planning and design process.</li>
-            <li>Once you're ready, we’ll begin building your website!</li>
+            <li>Contact our team for a personalized consultation.</li>
+            <li>We will gather all your requirements and discuss your vision for the website.</li>
+            <li>Our team will provide you with a detailed plan and timeline.</li>
+            <li>Once approved, we will start designing and building your custom website.</li>
           </ol>
         </div>
       ),
     },
     {
-      title: "Managing Your Website",
+      title: "Customizing Your Website",
       content: (
         <div>
-          <p>Learn how to manage your website effectively:</p>
+          <p>Want to update or customize your website? Here's how:</p>
           <ul>
-            <li>Access the admin panel.</li>
-            <li>Update content and images easily.</li>
-            <li>Monitor website performance and traffic.</li>
+            <li>Access the admin panel using your credentials.</li>
+            <li>Navigate to the customization section to update text, images, and other content.</li>
+            <li>You can also change the design and layout using our drag-and-drop editor.</li>
+            <li>Save changes and preview your website before publishing.</li>
           </ul>
         </div>
       ),
     },
     {
-      title: "Troubleshooting Common Issues",
+      title: "SEO and Performance Optimization",
       content: (
         <div>
-          <p>If you encounter issues:</p>
+          <p>Follow these steps to improve your website's SEO and performance:</p>
           <ul>
-            <li>Check your internet connection.</li>
-            <li>Clear your browser cache and cookies.</li>
-            <li>If issues persist, contact our support team.</li>
+            <li>Ensure that your website content is SEO-optimized using relevant keywords.</li>
+            <li>Regularly update meta tags, descriptions, and alt text for images.</li>
+            <li>Use our integrated SEO tools to track your performance and get improvement suggestions.</li>
+            <li>Monitor page load speeds and optimize images and scripts to enhance performance.</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Troubleshooting Technical Issues",
+      content: (
+        <div>
+          <p>If you run into technical issues with your website:</p>
+          <ul>
+            <li>First, check your internet connection and ensure it's stable.</li>
+            <li>Clear your browser cache and cookies, then try reloading the page.</li>
+            <li>Ensure that your domain and hosting services are up to date.</li>
+            <li>If the issue persists, contact our technical support team for further assistance.</li>
           </ul>
         </div>
       ),
@@ -62,7 +79,7 @@ const HelpCenter: React.FC = () => {
       title: "Contacting Support",
       content: (
         <div>
-          <p>For assistance, reach out to us:</p>
+          <p>If you need help with any service or website issue, feel free to reach out to us:</p>
           <p>Email: support@yourcompany.com</p>
           <p>Phone: +1 (555) 123-4567</p>
           <p>Live Chat: Available on our website from 9 AM to 6 PM (EST)</p>
@@ -70,10 +87,10 @@ const HelpCenter: React.FC = () => {
       ),
     },
     {
-      title: "Feedback and Suggestions",
+      title: "Providing Feedback and Suggestions",
       content: (
         <div>
-          <p>Your feedback is important to us! Please let us know how we can improve:</p>
+          <p>We value your feedback! Please share your suggestions for improving our services:</p>
           <Button type="link">Submit Feedback</Button>
         </div>
       ),
@@ -87,11 +104,11 @@ const HelpCenter: React.FC = () => {
 
   return (
     <>
-      <PageHeader title="Blogs" />
+      <PageHeader title="Help Center" />
       <PageBanner
-        title="Explore Our"
-        title2="Latest Blogs"
-        description="Stay updated with the latest insights, tutorials, and articles from industry experts. Discover useful tips and trends in web development, online learning, and much more."
+        title="How Can"
+        title2="We Help?"
+        description="Explore our knowledge base, get troubleshooting tips, and contact our support team for further assistance."
         image={helpCenterBanner}
       />
       <PageLayout>

@@ -7,6 +7,7 @@ import "./globals.css";
 import Progess from "./Progess";
 // import 'antd/dist/reset.css';
 import { ConfigProvider } from 'antd';
+import FloatLayout from "@/components/chat/FloatLayout";
 
 
 // Dynamically import NavBar and Footer components
@@ -81,6 +82,7 @@ export default function RootLayout({
         <Suspense fallback={<LoadingFallback />}>
           {children}
         </Suspense>
+        <FloatLayout />
         <Footer />
         {/* </ConfigProvider> */}
       </body>
