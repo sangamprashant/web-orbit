@@ -17,7 +17,9 @@ const priceBanner = "/page/price-banner.jpg";
 const careerBanner = "/page/career-bg.png";
 const serviceBanner = "/page/service-banner.png";
 const blogBanner = "/page/blog-banner.png";
-const helpCenterBanner = "/page/help-center-banner2.png"
+const helpCenterBanner = "/page/help-center-banner2.png";
+
+const botImage = "/chat/bot.png";
 
 export {
   LOGO_PNG,
@@ -26,13 +28,14 @@ export {
   aboutAgencyImage,
   aboutWhyChooseUs,
   aboutWhyChooseUsBg,
+  blogBanner,
+  botImage,
+  careerBanner,
   contactSvg_Hub,
   contactUsBanner,
+  helpCenterBanner,
   priceBanner,
   rocketSvg_Hub,
-  serviceSvg_Hub,
-  careerBanner,
   serviceBanner,
-  blogBanner,
-  helpCenterBanner
+  serviceSvg_Hub,
 };
