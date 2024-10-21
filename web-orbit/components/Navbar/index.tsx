@@ -32,7 +32,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 bg-white border-b border-gray-200 transition-all duration-300 ${hasScrolled ? 'shadow-lg' : ''}`}>
+    <header className={`nav-fix fixed w-full z-50 bg-white border-b border-gray-200 transition-all duration-300 ${hasScrolled ? 'shadow-lg' : ''}`}>
       <div className="container mx-auto flex justify-between items-center p-5">
         {/* Logo */}
         <Link href="/" className="flex items-center">

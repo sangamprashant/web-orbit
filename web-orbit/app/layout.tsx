@@ -72,6 +72,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="canonical" href="https://www.yourwebsite.com" />
+        <script src="https://widget.reviews.co.uk/google/widget.js"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -85,7 +86,10 @@ export default function RootLayout({
         <FloatLayout />
         <Footer />
         {/* </ConfigProvider> */}
+        <div id="google-reviews"></div>
       </body>
+
+
     </html>
   );
 }

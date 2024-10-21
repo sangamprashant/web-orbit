@@ -17,8 +17,7 @@ const FloatLayout = () => {
       ) : (
         <div className="fixed bottom-2 right-3 z-50">
           <button type="button" onClick={handleToggle} className="w-16 h-16 ">
-            {/* Display bot image inside button */}
-            <img src={botImage} alt="Chat Bot" className="w-full h-full rounded-full shadow" />
+            <img src={botImage} alt="Chat Bot" className="w-full h-full rounded-full shadow" width={100} height={100} />
           </button>
         </div>
       )}
